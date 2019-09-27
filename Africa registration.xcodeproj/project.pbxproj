@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		947A848A233E3A8B00ACB6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A8489233E3A8B00ACB6B5 /* AppDelegate.swift */; };
 		947A848C233E3A8B00ACB6B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A848B233E3A8B00ACB6B5 /* SceneDelegate.swift */; };
-		947A848E233E3A8B00ACB6B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A848D233E3A8B00ACB6B5 /* ViewController.swift */; };
 		947A8491233E3A8B00ACB6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947A848F233E3A8B00ACB6B5 /* Main.storyboard */; };
 		947A8493233E3A8C00ACB6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947A8492233E3A8C00ACB6B5 /* Assets.xcassets */; };
 		947A8496233E3A8C00ACB6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947A8494233E3A8C00ACB6B5 /* LaunchScreen.storyboard */; };
+		947A84A1233E43C200ACB6B5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A84A0233E43C200ACB6B5 /* Registration.swift */; };
+		94DBC390233E4FA00018D3CF /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */; };
+		94DBC392233E55F90018D3CF /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC391233E55F90018D3CF /* RoomType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		947A8486233E3A8B00ACB6B5 /* Africa registration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Africa registration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A8489233E3A8B00ACB6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		947A848B233E3A8B00ACB6B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		947A848D233E3A8B00ACB6B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		947A8490233E3A8B00ACB6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		947A8492233E3A8C00ACB6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947A8495233E3A8C00ACB6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947A8497233E3A8C00ACB6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947A84A0233E43C200ACB6B5 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = "Africa registration/Model/Registration.swift"; sourceTree = SOURCE_ROOT; };
+		94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		94DBC391233E55F90018D3CF /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		947A8488233E3A8B00ACB6B5 /* Africa registration */ = {
 			isa = PBXGroup;
 			children = (
-				947A8489233E3A8B00ACB6B5 /* AppDelegate.swift */,
+				947A849D233E423600ACB6B5 /* Model */,
+				947A849E233E423F00ACB6B5 /* View */,
+				947A849F233E424A00ACB6B5 /* Controller */,
 				947A848B233E3A8B00ACB6B5 /* SceneDelegate.swift */,
-				947A848D233E3A8B00ACB6B5 /* ViewController.swift */,
-				947A848F233E3A8B00ACB6B5 /* Main.storyboard */,
+				947A8489233E3A8B00ACB6B5 /* AppDelegate.swift */,
 				947A8492233E3A8C00ACB6B5 /* Assets.xcassets */,
 				947A8494233E3A8C00ACB6B5 /* LaunchScreen.storyboard */,
 				947A8497233E3A8C00ACB6B5 /* Info.plist */,
 			);
 			path = "Africa registration";
+			sourceTree = "<group>";
+		};
+		947A849D233E423600ACB6B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				947A84A0233E43C200ACB6B5 /* Registration.swift */,
+				94DBC391233E55F90018D3CF /* RoomType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		947A849E233E423F00ACB6B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				947A848F233E3A8B00ACB6B5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		947A849F233E424A00ACB6B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947A848E233E3A8B00ACB6B5 /* ViewController.swift in Sources */,
 				947A848A233E3A8B00ACB6B5 /* AppDelegate.swift in Sources */,
+				947A84A1233E43C200ACB6B5 /* Registration.swift in Sources */,
+				94DBC392233E55F90018D3CF /* RoomType.swift in Sources */,
+				94DBC390233E4FA00018D3CF /* RegistrationTableViewController.swift in Sources */,
 				947A848C233E3A8B00ACB6B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
