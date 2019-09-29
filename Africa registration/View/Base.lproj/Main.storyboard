@@ -28,6 +28,9 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldAction:" destination="0H6-Lo-Qsc" eventType="editingDidEnd" id="6XE-xO-Utj"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -49,6 +52,9 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldAction:" destination="0H6-Lo-Qsc" eventType="editingDidEnd" id="yUA-hF-2az"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -70,6 +76,9 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldAction:" destination="0H6-Lo-Qsc" eventType="editingDidEnd" id="6OH-TF-Xyc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -276,6 +285,81 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Room" id="Kbb-uc-iya">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZF6-gD-hC0">
+                                        <rect key="frame" x="0.0" y="530.00000023841858" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZF6-gD-hC0" id="VKz-7N-ueL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WiFi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-ti-1pN">
+                                                    <rect key="frame" x="20" y="11" width="33" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTD-At-7w2">
+                                                    <rect key="frame" x="296.5" y="0.0" width="28.5" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-Dr-WpJ">
+                                                    <rect key="frame" x="345" y="11" width="51" height="22"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JTD-At-7w2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NF4-ti-1pN" secondAttribute="trailing" id="22u-De-UKd"/>
+                                                <constraint firstItem="SLe-Dr-WpJ" firstAttribute="leading" secondItem="JTD-At-7w2" secondAttribute="trailing" constant="20" id="9Or-b0-u7h"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SLe-Dr-WpJ" secondAttribute="trailing" id="AnV-l1-Ou6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SLe-Dr-WpJ" secondAttribute="bottom" id="DZz-47-O2x"/>
+                                                <constraint firstItem="SLe-Dr-WpJ" firstAttribute="top" secondItem="VKz-7N-ueL" secondAttribute="topMargin" id="Fxx-ju-U3r"/>
+                                                <constraint firstItem="NF4-ti-1pN" firstAttribute="leading" secondItem="VKz-7N-ueL" secondAttribute="leadingMargin" id="MVc-gJ-i4m"/>
+                                                <constraint firstAttribute="bottom" secondItem="JTD-At-7w2" secondAttribute="bottom" id="SMZ-Gt-j0T"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NF4-ti-1pN" secondAttribute="bottom" id="hQ5-j7-chX"/>
+                                                <constraint firstItem="JTD-At-7w2" firstAttribute="top" secondItem="VKz-7N-ueL" secondAttribute="top" id="nQw-nF-W5z"/>
+                                                <constraint firstItem="NF4-ti-1pN" firstAttribute="top" secondItem="VKz-7N-ueL" secondAttribute="topMargin" id="wu1-xG-fcx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TJs-YQ-ucE">
+                                        <rect key="frame" x="0.0" y="574.00000023841858" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TJs-YQ-ucE" id="fuW-4C-9Go">
+                                            <rect key="frame" x="0.0" y="0.0" width="382.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUl-WG-RCg">
+                                                    <rect key="frame" x="20" y="11" width="83" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qi4-oW-gci">
+                                                    <rect key="frame" x="326" y="0.0" width="48.5" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qi4-oW-gci" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WUl-WG-RCg" secondAttribute="trailing" id="08Z-Wf-J2U"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qi4-oW-gci" secondAttribute="trailing" id="9zi-I5-2Fx"/>
+                                                <constraint firstItem="Qi4-oW-gci" firstAttribute="top" secondItem="fuW-4C-9Go" secondAttribute="top" id="FFD-1p-dON"/>
+                                                <constraint firstItem="WUl-WG-RCg" firstAttribute="leading" secondItem="fuW-4C-9Go" secondAttribute="leadingMargin" id="Fkg-hc-mjc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WUl-WG-RCg" secondAttribute="bottom" id="FlY-3N-2Ip"/>
+                                                <constraint firstItem="WUl-WG-RCg" firstAttribute="top" secondItem="fuW-4C-9Go" secondAttribute="topMargin" id="GSl-C4-iDq"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qi4-oW-gci" secondAttribute="bottom" id="efe-So-lDX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4EP-br-9jz" kind="show" identifier="RoomSelectionSegue" id="us8-Pd-VyR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="0H6-Lo-Qsc" id="vtG-42-Ijq"/>
@@ -294,6 +378,7 @@
                         <outlet property="checkInDatePicker" destination="zJw-R9-uOb" id="Yko-WB-7Ze"/>
                         <outlet property="checkOutDateLabel" destination="EUX-zg-yD8" id="dwx-X4-S3d"/>
                         <outlet property="checkOutDatePicker" destination="68G-V0-3R2" id="HZH-f9-IBC"/>
+                        <outlet property="doneButton" destination="2DV-0J-NzD" id="K8n-SA-uOr"/>
                         <outlet property="emailTextField" destination="s1J-Ou-EDY" id="SnA-td-h6c"/>
                         <outlet property="firstNameTextField" destination="Aqt-yy-wMy" id="faA-xl-fz9"/>
                         <outlet property="lastNameTextField" destination="vSB-yd-DwD" id="Lms-Nd-1nR"/>
@@ -301,11 +386,70 @@
                         <outlet property="numberOfAdultStepper" destination="1Jc-Vs-Jwl" id="lnN-t6-bV2"/>
                         <outlet property="numberOfChildrenLabel" destination="uqz-Kp-AxQ" id="9hC-ZS-HOw"/>
                         <outlet property="numberOfChildrenStepper" destination="9dr-oU-5EH" id="XkP-DC-mu7"/>
+                        <outlet property="roomTypeLabel" destination="Qi4-oW-gci" id="nQX-Qx-hLa"/>
+                        <outlet property="wifiSwitch" destination="SLe-Dr-WpJ" id="xnk-on-AiE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64a-YX-krx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="74"/>
+            <point key="canvasLocation" x="426" y="71"/>
+        </scene>
+        <!--Room selection-->
+        <scene sceneID="4xS-4b-Y14">
+            <objects>
+                <tableViewController id="4EP-br-9jz" customClass="RoomTableViewController" customModule="Africa_registration" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5tG-5H-zo1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomTableCell" textLabel="Nix-Ud-ZPV" detailTextLabel="Voe-Qz-w7P" style="IBUITableViewCellStyleValue1" id="7TO-nD-d8L">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7TO-nD-d8L" id="lE7-iN-Q6C">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nix-Ud-ZPV">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Voe-Qz-w7P">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4EP-br-9jz" id="YAv-sC-SlW"/>
+                            <outlet property="delegate" destination="4EP-br-9jz" id="O47-BT-VA7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Room selection" id="fNg-kE-033">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TwX-cT-gJb">
+                            <connections>
+                                <segue destination="y2F-Gt-3Tm" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="igw-xp-vD1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Nvy-Ax-hoa">
+                            <connections>
+                                <segue destination="y2F-Gt-3Tm" kind="unwind" identifier="SaveRoomSegue" unwindAction="unwindWithUnwindSegue:" id="jTn-7J-c2A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yj3-vx-M9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="y2F-Gt-3Tm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NC0-pC-PKH">

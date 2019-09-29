@@ -15,6 +15,7 @@
 		947A84A1233E43C200ACB6B5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A84A0233E43C200ACB6B5 /* Registration.swift */; };
 		94DBC390233E4FA00018D3CF /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */; };
 		94DBC392233E55F90018D3CF /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC391233E55F90018D3CF /* RoomType.swift */; };
+		94DBC39423412F1F0018D3CF /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC39323412F1F0018D3CF /* RoomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		947A84A0233E43C200ACB6B5 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = "Africa registration/Model/Registration.swift"; sourceTree = SOURCE_ROOT; };
 		94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		94DBC391233E55F90018D3CF /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
+		94DBC39323412F1F0018D3CF /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */,
+				94DBC39323412F1F0018D3CF /* RoomTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DBC39423412F1F0018D3CF /* RoomTableViewController.swift in Sources */,
 				947A848A233E3A8B00ACB6B5 /* AppDelegate.swift in Sources */,
 				947A84A1233E43C200ACB6B5 /* Registration.swift in Sources */,
 				94DBC392233E55F90018D3CF /* RoomType.swift in Sources */,

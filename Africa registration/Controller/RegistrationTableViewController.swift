@@ -21,6 +21,9 @@ class RegistrationTableViewController: UITableViewController {
     @IBOutlet weak var numberOfAdultStepper: UIStepper!
     @IBOutlet weak var numberOfChildrenLabel: UILabel!
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var wifiSwitch: UISwitch!
+    @IBOutlet weak var roomTypeLabel: UILabel!
     
     let checkInLabelIndexPath = IndexPath(row: 0, section: 1)
     let checkInPickerIndexPath = IndexPath(row: 1, section: 1)
@@ -39,6 +42,13 @@ class RegistrationTableViewController: UITableViewController {
         }
     }
     
+    // переменная для хранения данных выбранной комнаты( цена за комнату) и будем ее обновлять когда ей что то присваивается
+    var roomType: RoomType? {
+        didSet {
+            roomTypeLabel.text = roomType?.name
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let midnightToday = Calendar.current.startOfDay(for: Date()) // минимальная дата заезда не ниже сегодняшнего дня
@@ -48,10 +58,19 @@ class RegistrationTableViewController: UITableViewController {
         
         updateDateViews()
         updateNumberOfGuests()
+        controlText()
+    }
+    //этот метод мы переопределяем чтобы сохранять выбранную комнату в румтейблвью (чекмарк)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard roomType == roomType, segue.identifier == "RoomSelectionSegue" else {return}
+        
+        let controller = segue.destination as! RoomTableViewController
+        controller.selectedRoomType = roomType
     }
     
     func updateDateViews() {
-        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(60*60*24) //дата выезда больше даты заезда минимум на сутки, выставляется в секундах
+        //дата выезда больше даты заезда минимум на сутки, выставляется в секундах
+        checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(60*60*24)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -65,6 +84,10 @@ class RegistrationTableViewController: UITableViewController {
         numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
     }
      
+    @IBAction func textFieldAction(_ sender: UITextField) {
+        controlText()
+    }
+    
     @IBAction func doneBarButton(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
@@ -73,6 +96,8 @@ class RegistrationTableViewController: UITableViewController {
         let checkOutDate = checkOutDatePicker.date
         let numberOfAdult = Int(numberOfAdultStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let wifi = wifiSwitch.isOn
+        guard let roomType = roomType else {return}
         
         let registration = Registration(
             firstName: firstName,
@@ -81,15 +106,26 @@ class RegistrationTableViewController: UITableViewController {
             checkInDate: checkInDate,
             checkOutDate: checkOutDate,
             numberOfAdult: numberOfAdult,
-            numberOfChildren: numberOfChildren)
+            numberOfChildren: numberOfChildren,
+            wifi: wifi,
+            roomType: roomType)
         print(registration)
     }
     @IBAction func datePickerChanged(_ sender: UIDatePicker) { //оба пикера сюда подцепляем
         updateDateViews()
+        controlText()
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         updateNumberOfGuests()
+        controlText()
+    }
+    //здесь мы передаем через анвайнд данные выбранной комнаты (идентификаторы сегвея создаются после перетаскивания с бар баттон айтемов к выходу из вью)
+    @IBAction func unwind(unwindSegue: UIStoryboardSegue) {
+        guard unwindSegue.identifier == "SaveRoomSegue" else {return}
+        
+        let controller = unwindSegue.source as! RoomTableViewController
+        roomType = controller.selectedRoomType
     }
 }
 
@@ -108,6 +144,7 @@ extension RegistrationTableViewController {
             isCheckInPickerShown = false //добавляем чтобы пикер был открыт только один
         default: return
         }
+        controlText()
         //обновляем данные чтобы работало изменение
         tableView.beginUpdates()
         tableView.endUpdates()
@@ -123,5 +160,10 @@ extension RegistrationTableViewController {
         default:
             return 44
         }
+    }
+    
+    func controlText () {
+        guard firstNameTextField.hasText && lastNameTextField.hasText && emailTextField.hasText else { return doneButton.isEnabled = false }
+        doneButton.isEnabled = true
     }
 }

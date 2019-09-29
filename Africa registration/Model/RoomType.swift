@@ -12,6 +12,13 @@ struct RoomType: Equatable {
     var shortName: String
     var price: Int
     
+//    private init (id: Int, name: String, shortName: String, price: Int) { // делаем прайват инит чтобы не создавать экземпляров,а доступ через all
+//        self.id = id
+//        self.name = name
+//        self.shortName = shortName
+//        self.price = price
+//    }
+    
     static var room = [
         RoomType(id: 0, name: "One bed room", shortName: "1B", price: 50),
         RoomType(id: 1, name: "Two beds room", shortName: "2B", price: 75),
