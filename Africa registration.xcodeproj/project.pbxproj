@@ -13,10 +13,21 @@
 		947A8493233E3A8C00ACB6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947A8492233E3A8C00ACB6B5 /* Assets.xcassets */; };
 		947A8496233E3A8C00ACB6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947A8494233E3A8C00ACB6B5 /* LaunchScreen.storyboard */; };
 		947A84A1233E43C200ACB6B5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A84A0233E43C200ACB6B5 /* Registration.swift */; };
+		94B2C1D923AE182400DBCFB2 /* Africa_registrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2C1D823AE182400DBCFB2 /* Africa_registrationUITests.swift */; };
 		94DBC390233E4FA00018D3CF /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */; };
 		94DBC392233E55F90018D3CF /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC391233E55F90018D3CF /* RoomType.swift */; };
 		94DBC39423412F1F0018D3CF /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBC39323412F1F0018D3CF /* RoomTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94B2C1DB23AE182400DBCFB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A847E233E3A8B00ACB6B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 947A8485233E3A8B00ACB6B5;
+			remoteInfo = "Africa registration";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		947A8486233E3A8B00ACB6B5 /* Africa registration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Africa registration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +38,9 @@
 		947A8495233E3A8C00ACB6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		947A8497233E3A8C00ACB6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947A84A0233E43C200ACB6B5 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = "Africa registration/Model/Registration.swift"; sourceTree = SOURCE_ROOT; };
+		94B2C1D623AE182400DBCFB2 /* Africa registrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Africa registrationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B2C1D823AE182400DBCFB2 /* Africa_registrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Africa_registrationUITests.swift; sourceTree = "<group>"; };
+		94B2C1DA23AE182400DBCFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DBC38F233E4FA00018D3CF /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		94DBC391233E55F90018D3CF /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		94DBC39323412F1F0018D3CF /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +54,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94B2C1D323AE182400DBCFB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				947A8488233E3A8B00ACB6B5 /* Africa registration */,
+				94B2C1D723AE182400DBCFB2 /* Africa registrationUITests */,
 				947A8487233E3A8B00ACB6B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				947A8486233E3A8B00ACB6B5 /* Africa registration.app */,
+				94B2C1D623AE182400DBCFB2 /* Africa registrationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +123,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		94B2C1D723AE182400DBCFB2 /* Africa registrationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94B2C1D823AE182400DBCFB2 /* Africa_registrationUITests.swift */,
+				94B2C1DA23AE182400DBCFB2 /* Info.plist */,
+			);
+			path = "Africa registrationUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,18 +152,40 @@
 			productReference = 947A8486233E3A8B00ACB6B5 /* Africa registration.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94B2C1D523AE182400DBCFB2 /* Africa registrationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B2C1DF23AE182400DBCFB2 /* Build configuration list for PBXNativeTarget "Africa registrationUITests" */;
+			buildPhases = (
+				94B2C1D223AE182400DBCFB2 /* Sources */,
+				94B2C1D323AE182400DBCFB2 /* Frameworks */,
+				94B2C1D423AE182400DBCFB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94B2C1DC23AE182400DBCFB2 /* PBXTargetDependency */,
+			);
+			name = "Africa registrationUITests";
+			productName = "Africa registrationUITests";
+			productReference = 94B2C1D623AE182400DBCFB2 /* Africa registrationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		947A847E233E3A8B00ACB6B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Igor Shelginskiy";
 				TargetAttributes = {
 					947A8485233E3A8B00ACB6B5 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					94B2C1D523AE182400DBCFB2 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 947A8485233E3A8B00ACB6B5;
 					};
 				};
 			};
@@ -149,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				947A8485233E3A8B00ACB6B5 /* Africa registration */,
+				94B2C1D523AE182400DBCFB2 /* Africa registrationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +216,13 @@
 				947A8496233E3A8C00ACB6B5 /* LaunchScreen.storyboard in Resources */,
 				947A8493233E3A8C00ACB6B5 /* Assets.xcassets in Resources */,
 				947A8491233E3A8B00ACB6B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B2C1D423AE182400DBCFB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +242,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94B2C1D223AE182400DBCFB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B2C1D923AE182400DBCFB2 /* Africa_registrationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94B2C1DC23AE182400DBCFB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 947A8485233E3A8B00ACB6B5 /* Africa registration */;
+			targetProxy = 94B2C1DB23AE182400DBCFB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		947A848F233E3A8B00ACB6B5 /* Main.storyboard */ = {
@@ -352,6 +430,46 @@
 			};
 			name = Release;
 		};
+		94B2C1DD23AE182400DBCFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BH8ZW8FZ54;
+				INFOPLIST_FILE = "Africa registrationUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enigvor.Africa-registrationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Africa registration";
+			};
+			name = Debug;
+		};
+		94B2C1DE23AE182400DBCFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BH8ZW8FZ54;
+				INFOPLIST_FILE = "Africa registrationUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enigvor.Africa-registrationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Africa registration";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -369,6 +487,15 @@
 			buildConfigurations = (
 				947A849B233E3A8C00ACB6B5 /* Debug */,
 				947A849C233E3A8C00ACB6B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B2C1DF23AE182400DBCFB2 /* Build configuration list for PBXNativeTarget "Africa registrationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B2C1DD23AE182400DBCFB2 /* Debug */,
+				94B2C1DE23AE182400DBCFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
