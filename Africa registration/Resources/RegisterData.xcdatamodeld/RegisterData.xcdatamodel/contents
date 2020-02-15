@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentClient" representedClassName=".CurrentClient" syncable="YES">
+        <attribute name="checkInDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="checkOutDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="emailAdress" optional="YES" attributeType="String"/>
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="numberOfAdults" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="numberOfChild" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="roomType" attributeType="Transformable"/>
+        <attribute name="wifi" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="CurrentClient" positionX="-54" positionY="-9" width="128" height="178"/>
+    </elements>
+</model>

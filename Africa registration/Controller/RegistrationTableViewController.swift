@@ -55,7 +55,6 @@ class RegistrationTableViewController: UITableViewController {
         //checkInDatePicker.date = Date() - данная запись вернет время с текущими секундами и минутами а нам надо с нулевыми
         checkInDatePicker.date = midnightToday
         checkInDatePicker.minimumDate = midnightToday
-        
         updateDateViews()
         updateNumberOfGuests()
         controlText()
